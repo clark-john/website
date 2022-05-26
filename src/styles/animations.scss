@@ -1,0 +1,53 @@
+@mixin line-hover-color($color) {
+	content: '';
+	top: 1.5em;
+	left: 0em;
+	height: 2px;
+	width: 0px;
+	background-color: $color;	
+	position: absolute;
+	transition: width 200ms;
+}
+
+@mixin line-onload-color($color) {
+	content: '';
+	top: 1.1em;
+	left: 0em;
+	height: 2px;
+	background-color: $color;	
+	position: absolute;
+	transition: width 200ms;
+	animation: link-onload 500ms ease-in-out 1 forwards;
+}
+
+.link-hover::after {
+	@include line-hover-color(yellow)
+}	
+
+.link-onload::after {
+	@include line-onload-color(white)
+}
+
+.link-hover:hover::after {
+	width: 100%;
+}
+
+
+@media (prefers-color-scheme: light){
+	.link-hover::after {
+		@include line-hover-color(black)
+	}	
+	.link-onload::after {
+		@include line-onload-color(black)
+	}
+}
+
+
+@keyframes link-onload {
+	from {
+		width: 0px;
+	} 
+	to {
+		width: 100%;
+	}
+}
