@@ -2,7 +2,7 @@
 	<Wrapper class="flex flex-col gap-5 mt-7 mb-10 mobile:mx-6">
 		<div class="text-5xl">Welcome to my <span class="font-bold">GitHub Page</span>:)</div>
     <div class="text-xl">
-      Hi there, I'm <b>Clark</b>. A <span class="link-onload relative">coder</span> in this <b>GitHub</b> platform. I'm {{ myAge }} years old as of now.
+      Hi there, I'm <b>Clark</b>. A <span class="link-onload relative">coder</span> in this <b>GitHub</b> platform. I usually do coding for fun.
     </div>
     <Skills />
     <Projects />

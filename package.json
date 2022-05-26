@@ -7,7 +7,8 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "ts-watch": "vue-tsc -w",
-    "deploy": "yarn build && gh-pages -d dist"
+    "deploy": "yarn build && gh-pages -d dist",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.1.1",
@@ -24,6 +25,7 @@
     "autoprefixer": "^10.4.7",
     "cssnano": "^5.1.9",
     "gh-pages": "^4.0.0",
+    "husky": "^8.0.1",
     "postcss": "^8.4.14",
     "postcss-font-magician": "^3.0.0",
     "tailwindcss": "^3.0.24",
