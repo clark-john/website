@@ -1,4 +1,4 @@
-import{_ as t,h as e}from"./index.529bda9e.js";const i={},o=e(`<div class="text-2xl mb-4">Fetch Data with Axios</div><div style="list-style-type:decimal;"><li>Open your terminal, and change current working directory to your project</li><li>Install axios with <code>npm i axios</code></li><li>Create your file named <i>index.js</i> or any name you want.</li><li>Add this code:</li><pre>		const axios = require(&#39;axios&#39;)\r
+import{_ as t,h as e}from"./index.217af9f5.js";const i={},o=e(`<div class="text-2xl mb-4">Fetch Data with Axios</div><div style="list-style-type:decimal;"><li>Open your terminal, and change current working directory to your project</li><li>Install axios with <code>npm i axios</code></li><li>Create your file named <i>index.js</i> or any name you want.</li><li>Add this code:</li><pre>		const axios = require(&#39;axios&#39;)\r
 \r
 		axios.get(&#39;https://api.github.com/users/clark-john&#39;)\r
 			.then(res =&gt; {\r
