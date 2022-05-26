@@ -1,0 +1,1 @@
+import{_ as t}from"./Wrapper.59497f42.js";import{_ as s,g as r,o as n,f as _,w as a,e as c,a as p}from"./index.529bda9e.js";const i={},l=p("div",{class:"text-2xl mb-8"},"How-To Guides",-1);function m(u,d){const e=r("router-view"),o=t;return n(),_(o,null,{default:a(()=>[l,c(e)]),_:1})}var x=s(i,[["render",m]]);export{x as default};
