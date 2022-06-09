@@ -4,7 +4,7 @@
     <div class="flex gap-8">
       <div v-for="x in links">
         <a :href="x.link" target="_blank">
-          <i :class="x.icon + ' text-3xl'" /> 
+          <i :class="x.icon + ' text-3xl transition-transform hover:scale-[1.15] duration-200'" /> 
         </a>        
       </div>
     </div>

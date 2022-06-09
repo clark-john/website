@@ -1,5 +1,5 @@
 <template>
-	<div> <!--  -->
+	<div>
 		<nav class="dark:bg-zinc-900 bg-white shadow-md px-5 py-4 grid grid-cols-navbar items-center">
       <button class="absolute py-2 px-4" uk-toggle="target: #offcanvas">
       	<i class="fas fa-bars"></i>

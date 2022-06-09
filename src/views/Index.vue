@@ -8,8 +8,13 @@
     <Projects />
     <div class="flex items-center flex-col gap-5">
     	<div class="text-xl text-black dark:text-white">You can email me by clicking this button:</div>
-    	<button @click="sendEmail" class="bg-cyan-800 rounded-2xl active:translate-y-1 transition-[filter] duration-400 hover:brightness-75 py-3 px-6">
-    		<i class="fas fa-paper-plane" ></i> Send Email
+    	<button @click="sendEmail" 
+    		class="dark:bg-cyan-800 bg-cyan-300 
+    		rounded-2xl active:translate-y-1 
+    		transition-[filter] duration-400 
+    		hover:brightness-75 py-3 px-6
+    		shadow-lg">
+    		<i class="fas fa-paper-plane" /> Send Email
     	</button>
     </div>
   </Wrapper>
