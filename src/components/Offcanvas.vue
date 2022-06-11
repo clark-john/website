@@ -6,5 +6,9 @@
     <div>
       <router-link to="/how-to/fetch-data-with-axios">Fetch Data with Axios</router-link>
     </div>
+    <div class="text-lg"><router-link to='/others'><b>Others</b></router-link></div>
+    <div>
+      <router-link to="/others/counter">Counter</router-link>
+    </div>
   </div>
 </template>
