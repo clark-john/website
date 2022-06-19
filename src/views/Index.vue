@@ -22,14 +22,8 @@
 </template>
 
 <script>
-import myAge from './data'
 
 export default {
-	setup(){
-		return {
-			myAge
-		}
-	},
 	methods: {
 		sendEmail(){
 			document.location.href = "mailto:daprogrammer1@gmail.com"
