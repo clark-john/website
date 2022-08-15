@@ -1,36 +1,36 @@
 {
   "name": "clark-john.github.io",
-  "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite --host",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview",
-    "ts-watch": "vue-tsc -w",
-    "deploy": "gh-pages -d dist",
-    "prepare": "husky install"
+    "dev": "vite --port 3003 --host",
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clark-john/clark-john.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clark-john/clark-john.github.io/issues"
+  },
+  "homepage": "https://github.com/clark-john/clark-john.github.io#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.1.1",
-    "moment": "^2.29.3",
-    "sass": "^1.52.1",
-    "uikit": "^3.14.1",
-    "unplugin-vue-components": "^0.19.5",
-    "vue": "^3.2.25",
-    "vue-meta": "^2.4.0",
-    "vue-router": "^4.0.15"
+    "@chakra-ui/react": "^2.2.8",
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^2.3.1",
-    "autoprefixer": "^10.4.7",
-    "cssnano": "^5.1.9",
-    "gh-pages": "^4.0.0",
-    "husky": "^8.0.1",
-    "postcss": "^8.4.14",
-    "postcss-font-magician": "^3.0.0",
-    "tailwindcss": "^3.0.24",
-    "typescript": "^4.5.4",
-    "vite": "^2.9.5",
-    "vue-tsc": "^0.34.7"
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.1",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.7"
   }
 }
