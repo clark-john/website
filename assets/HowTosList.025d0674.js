@@ -1,1 +1,0 @@
-import{_ as t,g as o,o as a,c as s,a as c,e as r,w as n,b as _}from"./index.5eb27d52.js";const i={},l=_("Fetch Data with Axios");function d(f,h){const e=o("router-link");return a(),s("div",null,[c("div",null,[r(e,{to:"/how-to/fetch-data-with-axios"},{default:n(()=>[l]),_:1})])])}var x=t(i,[["render",d]]);export{x as default};
