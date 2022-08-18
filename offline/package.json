@@ -1,0 +1,26 @@
+{
+  "name": "offline",
+  "version": "1.0.0",
+  "description": "Offline Page",
+  "author": "John Clark",
+  "license": "ISC",
+  "scripts": {
+    "dev": "concurrently \"npm:watch:*\"",
+    "build": "sass offline.scss offline.css",
+    "prepare": "npm run build",
+    "watch:sass": "sass -w offline.scss offline.css",
+    "watch:server": "live-server --port=9000 --open=offline.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "offline",
+    "page",
+    "offline page"
+  ],
+  "dependencies": {
+    "sass": "^1.54.4"
+  },
+  "devDependencies": {
+    "concurrently": "^7.3.0"
+  }
+}

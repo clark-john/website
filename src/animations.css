@@ -1,0 +1,64 @@
+/* Mixins */
+
+@mixin link-on-hover($color) {
+	&::before {
+		position: absolute;
+		height: 1.5px;
+		content: '';
+		background-color: $color;
+		top: 1.3rem;
+		left: 0;
+		transition: width 200ms;
+		width: 0%;
+	}
+	&:hover::before {
+		width: 100%;
+	}
+	position: relative;
+}
+
+@mixin link-on-load($color) {
+	&::before {
+		position: absolute;
+		height: 1.5px;
+		content: '';
+		background-color: $color;
+		top: 1.5rem;
+		left: 0;
+		transition: width 200ms;
+		animation: onload 300ms ease-in-out 1 forwards;
+	}
+	position: relative;
+}
+
+/* Light mode */
+
+.link-onload {
+	@include link-on-load(black);
+}
+
+.link-onhover {
+	@include link-on-hover(black);
+}
+
+/* Dark mode */
+
+[data-theme="dark"] {
+	.link-onload {
+		@include link-on-load(white);
+	}
+	.link-onhover {
+		@include link-on-hover(yellow);
+	}
+}
+
+/* Keyframes rule */
+
+@keyframes onload {
+	from {
+		width: 0%;
+	}	
+	to {
+		width: 100%;
+	}
+}

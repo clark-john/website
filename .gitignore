@@ -7,12 +7,11 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Folders
 node_modules
 dist
 dist-ssr
 *.local
-
-deploy.sh
 
 # Editor directories and files
 .vscode/*
@@ -24,3 +23,12 @@ deploy.sh
 *.njsproj
 *.sln
 *.sw?
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.y*ml
+
+# Generated
+*.map
+offline/*.css
