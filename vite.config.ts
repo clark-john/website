@@ -6,5 +6,10 @@ export default defineConfig({
   plugins: [
     vue(),
     Components()
-  ]
+  ],
+  resolve: {
+    alias: [
+      { find: "@", replacement: "/src/" }
+    ]
+  }
 })
