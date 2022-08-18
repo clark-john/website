@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 ./src linguist-vendored
+=======
+*.{tsx,ts} eol=lf
+* text=auto
+.husky linguist-generated
+>>>>>>> dc0511981aab542592d8c2e3d7bb77d32374f7de

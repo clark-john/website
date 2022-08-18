@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/src/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clark's GitHub Page</title>
+    
+    <!-- PWA: Apple Touch Icon, and Service Worker registration. --><!-- Vite Plugin PWA will add the Web App Manifest during build -->
+    <link rel="apple-touch-icon" href="/images/pwa/icon-192x192.png">
+    <script type="module">
+      import { registerSW } from 'virtual:pwa-register';
+      registerSW();
+    </script>
+    <style>
+      * {
+        font-family: Inter;
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-    <noscript>
-      Bruh, enable JavaScript.
+    <script type="module" src="/src/main.tsx"></script>
+    <noscript style="text-align: center;">
+      <div>X-(</div>
+      <div>I can't live without JavaScript. Please turn it on right now.</div>
     </noscript>
   </body>
 </html>
