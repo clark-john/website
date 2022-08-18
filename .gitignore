@@ -24,3 +24,5 @@ deploy.sh
 *.njsproj
 *.sln
 *.sw?
+offline
+.husky
