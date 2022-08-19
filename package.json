@@ -8,9 +8,11 @@
     "dev": "vite --port 3003 --host",
     "build": "rimraf dist && vite build",
     "fix": "eslint --fix ./src/**/*.{tsx,ts} vite.config.ts --ignore-pattern .gitignore",
-    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "preview": "vite build && vite preview",
+    "prebuild": "eslint ./src/**/*.{tsx,ts}",
+    "postbuild": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -32,7 +34,6 @@
     "jotai": "^1.7.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.3.0",
     "workbox-recipes": "^6.2.4",

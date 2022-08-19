@@ -42,10 +42,10 @@ const SocialMedia: React.FC = () => {
           <style jsx="true">
             {`
           .icon-hover {
-            transition: filter 100ms;
+            transition: transform 100ms;
           }
           .icon-hover:hover {
-            filter: brightness(.5);
+            transform: scale(1.15);
           }
           `}
           </style>
