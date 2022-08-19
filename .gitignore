@@ -23,7 +23,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-.husky
 
 # Lock files
 package-lock.json
