@@ -1,7 +1,8 @@
 {
   "name": "Clark's Github Page",
-  "short_name": "Clark",
-  "description": "Basta website",
+  "author": "John Clark",
+  "short_name": "Clark GH Page",
+  "description": "My website",
   "display": "standalone",
   "icons": [
     {
