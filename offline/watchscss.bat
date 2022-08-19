@@ -1,1 +1,0 @@
-npx sass -w offline.scss offline.css

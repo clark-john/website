@@ -23,10 +23,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-<<<<<<< HEAD
-offline
 .husky
-=======
 
 # Lock files
 package-lock.json
@@ -36,4 +33,3 @@ pnpm-lock.y*ml
 # Generated
 *.map
 offline/*.css
->>>>>>> dc0511981aab542592d8c2e3d7bb77d32374f7de

@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
 import { VitePWA as pwa } from "vite-plugin-pwa";
-import eslint from 'vite-plugin-eslint'
-import react from '@vitejs/plugin-react'
+import eslint from 'vite-plugin-eslint';
+import react from '@vitejs/plugin-react';
 import manifest from "./manifest.json";
 
 export default defineConfig({

@@ -3,7 +3,6 @@ import * as React from 'react';
 
 const SkillItem = props => {
   const { name, image, alt } = props;
-  console.log(image);
   return (
     <Flex alignItems='center' gap={4} p={4}>
       <Image src={image} alt={alt} height={10} />
