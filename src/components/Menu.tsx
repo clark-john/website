@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { FaChevronUp } from 'react-icons/fa';
 import {
   Menu,
   MenuButton,
@@ -18,8 +18,8 @@ const chevronAtom = atom(false);
 
 const NavbarMenu = () => {
   const navigate = useNavigate();
-  const [isMobile] = useMediaQuery('(max-width: 380px)');
   const [isRotated, rotateChevron] = useAtom<boolean>(chevronAtom);
+  const [isMobile] = useMediaQuery('(max-width: 720px)');
   return (
     <Box ml={10} position='absolute'>
       <Menu onClose={() => rotateChevron(false)}>
@@ -34,9 +34,19 @@ const NavbarMenu = () => {
             )}
             onClick={() => rotateChevron(!isRotated)}
           >
-            {isMobile ? <Icon as={FaChevronDown} /> : 'Menu'}
+            Menu
           </MenuButton>
-        ) : null}
+        ) : (
+          <MenuButton
+            as={Box}
+            onClick={() => rotateChevron(!isRotated)}
+            style={{ transform: 'translate(-10px, 2px)' }}
+          >
+            <motion.div animate={isRotated ? { rotate: 180 } : { rotate: 0 }}>
+              <Icon as={FaChevronUp} />
+            </motion.div>
+          </MenuButton>
+        )}
         <MenuList>
           <MenuItem onClick={() => navigate('/about')}>
             About

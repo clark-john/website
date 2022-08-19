@@ -7,6 +7,8 @@ import {
   Route,
 } from 'react-router-dom';
 
+import './scrollbar.css';
+
 import Layout from './layout';
 
 // pages

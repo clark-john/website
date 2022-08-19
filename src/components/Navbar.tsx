@@ -8,7 +8,7 @@ import {
   useColorMode,
   Show
 } from '@chakra-ui/react';
-import NavbarMenu from './menu';
+import NavbarMenu from './Menu';
 import { FaSun, FaMoon } from 'react-icons/fa';
 import '@/animations.css';
 

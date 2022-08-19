@@ -3,7 +3,8 @@ import {
   Box,
   Center,
   Grid,
-  VStack
+  VStack,
+  useMediaQuery
 } from '@chakra-ui/react';
 import SkillItem from '@/components/SkillItem';
 
@@ -16,12 +17,14 @@ const Skills: React.FC = (props: object) => {
     </li>
   ));
 
+  const [isMobile] = useMediaQuery('(max-width: 390px)');
+
   return (
     <Center my={7}>
       <VStack>
         <Box>Current Skills:</Box>
         <Box>
-          <Grid templateColumns='30% 30% 30%' alignItems='center' gap={5} justifyItems='center'>
+          <Grid templateColumns={isMobile ? '40% 40%' : '30% 30% 30%'} alignItems='center' gap={5} justifyItems='center'>
             {skillsList}
           </Grid>
         </Box>

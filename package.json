@@ -21,8 +21,7 @@
     "self_project"
   ],
   "lint-staged": {
-    "*.tsx": "eslint",
-    "*": "eclint check"
+    "*.tsx": "eslint"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.2.8",
@@ -33,6 +32,7 @@
     "jotai": "^1.7.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.3.0",
     "workbox-recipes": "^6.2.4",
