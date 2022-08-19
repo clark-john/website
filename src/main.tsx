@@ -1,4 +1,4 @@
-import { createRoot } from 'react-dom/client';
+import { createRoot, hydrateRoot } from 'react-dom/client';
 import { ChakraProvider } from '@chakra-ui/react';
 import * as React from 'react';
 import {
@@ -22,7 +22,7 @@ if (!(window.location.href.indexOf('#') !== -1)) {
   window.location.hash = '/';
 }
 
-createRoot(document.querySelector('#app')).render(
+(import.meta.env.SSR ? hydrateRoot : createRoot)(document.querySelector('#app')).render(
   <React.StrictMode>
     <ChakraProvider>
       <HashRouter>
