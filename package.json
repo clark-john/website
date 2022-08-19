@@ -21,7 +21,7 @@
     "self_project"
   ],
   "lint-staged": {
-    "*.tsx": "eslint"
+    "*.{tsx,ts}": "eslint"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.2.8",
