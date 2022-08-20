@@ -6,6 +6,7 @@ import {
   Grid,
   Button,
   useColorMode,
+  useMediaQuery,
   Show
 } from '@chakra-ui/react';
 import NavbarMenu from './Menu';
@@ -14,6 +15,7 @@ import '@/animations.css';
 
 const Navbar: React.FC = () => {
   const { colorMode, toggleColorMode } = useColorMode();
+  const [breakpoint1] = useMediaQuery('(max-width: 480px)');
   return (
     <Grid alignItems='center' boxShadow='0 0 1rem -3px black'>
       <NavbarMenu />
@@ -28,7 +30,7 @@ const Navbar: React.FC = () => {
           </Show>
         </Box>
       </Flex>
-      <Button position='absolute' right={10} onClick={toggleColorMode}>
+      <Button position='absolute' right={breakpoint1 ? 5 : 10} onClick={toggleColorMode}>
         {colorMode === 'light' ? <FaMoon /> : <FaSun />}
       </Button>
     </Grid>

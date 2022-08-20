@@ -17,7 +17,7 @@ const Skills: React.FC = (props: object) => {
     </li>
   ));
 
-  const [isMobile] = useMediaQuery('(max-width: 390px)');
+  const [isMobile] = useMediaQuery('(max-width: 520px)');
 
   return (
     <Center my={7}>

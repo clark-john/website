@@ -3,6 +3,7 @@ module.exports = {
 		'postcss-font-magician': {
 			foundries: "google"
 		},
-		'@csstools/postcss-sass': {}
+		'@csstools/postcss-sass': {},
+		autoprefixer: {}
 	}
 }
