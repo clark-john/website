@@ -32,3 +32,5 @@ pnpm-lock.y*ml
 # Generated
 *.map
 offline/*.css
+
+.*cache

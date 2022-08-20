@@ -6,19 +6,19 @@ import manifest from './manifest.json';
 import path from 'path';
 
 export default defineConfig({
-  plugins: [
-    eslint(),
-    react(),
-    pwa({
-      strategies: 'injectManifest',
-      srcDir: '',
-      filename: 'service-worker.js',
-      manifest,
-    }),
-  ],
-  resolve: {
-    alias: [
-      { find: '@', replacement: path.resolve(__dirname, './src') }
-    ]
-  }
+	plugins: [
+		eslint(),
+		react(),
+		pwa({
+			strategies: 'injectManifest',
+			srcDir: '',
+			filename: 'service-worker.js',
+			manifest,
+		}),
+	],
+	resolve: {
+		alias: [
+			{ find: '@', replacement: path.resolve(__dirname, './src') }
+		]
+	}
 });
