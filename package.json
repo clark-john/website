@@ -2,7 +2,7 @@
   "name": "clark-john.github.io",
   "version": "2.0.0",
   "description": "2nd Version",
-  "author": "John Clark <mjohnclark@yahoo.com>",
+  "author": "John Clark <john_cl4rk@yahoo.com>",
   "license": "ISC",
   "scripts": {
     "dev": "vite --port 3003 --host",
