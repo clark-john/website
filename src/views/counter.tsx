@@ -1,24 +1,23 @@
 import * as React from 'react';
+import { useState } from 'react';
 import { 
 	Box, 
 	Button, 
 	Center, 
 	Flex
 } from '@chakra-ui/react';
-import { countStore } from '@/stores/countStore';
-import { setCount } from '@/utils/countStorage';
+import { setCount as setStorageCount, getCount } from '@/utils/countStorage';
  
 const Counter: React.FC = () => {
-	const count = countStore(s => s.count);
-	const increment = countStore(s => s.increment);
+	const [count, setCount] = useState(getCount());
 
-	window.onunload = setCount(count);
+	window.onunload = () => setStorageCount(Number(count));
 
 	return (
 		<Box mt='2rem'>
 			<Center>
 				<Button
-					onClick={increment}
+					onClick={() => setCount(y => Number(y) + 1)}
 					py='16rem'
 					px='15rem'
 					borderRadius='100%'

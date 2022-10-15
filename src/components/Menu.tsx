@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import { FaChevronUp } from 'react-icons/fa';
 import {
 	Menu,
@@ -12,15 +13,13 @@ import {
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { chevronStore } from '@/stores/chevronStore';
 
 const NavbarMenu = () => {
 	const navigate = useNavigate();
 	const [isMobile] = useMediaQuery('(max-width: 720px)');
 
-	const isRotated = chevronStore(state => state.isFlipped);
-	const rotateChevron = chevronStore(state => state.flip);
-	const reset = chevronStore(state => state.reset);
+	const [isRotated, setRotated] = useState<boolean>(false);
+	const reset = () => setRotated(() => false);
 
 	return (
 		<Box ml={10} position='absolute'>
@@ -34,14 +33,14 @@ const NavbarMenu = () => {
 								<Icon as={FaChevronUp} />
 							</motion.div>
 						}
-						onClick={() => rotateChevron(!isRotated)}
+						onClick={() => setRotated(x => !x)}
 					>
 						Menu
 					</MenuButton>
 				) : (
 					<MenuButton
 						as={Box}
-						onClick={() => rotateChevron(!isRotated)}
+						onClick={() => setRotated(x => !x)}
 						style={{ transform: 'translate(-10px, 2px)' }}
 					>
 						<motion.div animate={isRotated ? { rotate: 180 } : { rotate: 0 }}>

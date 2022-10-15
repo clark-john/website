@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Box, VStack } from '@chakra-ui/react';
 import '@/animations.css';
 import { skills } from '@/skills';
-import Strong from '@/components/strong';
 import Skills from '@/components/Skills';
 import SocialMedia from '@/components/SocialMedia';
 
@@ -11,13 +10,13 @@ const Index: React.FC = () => (
 	<Box>
 		<VStack alignItems='start' spacing={4}>
 			<Box fontSize={48}>
-				Welcome to my <Strong>GitHub Page</Strong>
+				Welcome to my <b>GitHub Page</b>
 				:&#41;
 			</Box>
 			<Box fontSize={20}>
-				Hi there, <Strong>I&apos;m Clark.</Strong> A{' '}
+				Hi there, <b>I&apos;m Clark.</b> A{' '}
 				<span className='link-onload'>coder</span> in this{' '}
-				<Strong>GitHub</Strong> platform. I usually do coding for fun.
+				<b>GitHub</b> platform. I usually do coding for fun.
 			</Box>
 		</VStack>
 		<Skills content={skills} />

@@ -1,9 +1,14 @@
 import * as React from 'react';
 import { Box, Center, Grid, VStack, useMediaQuery } from '@chakra-ui/react';
 import SkillItem from '@/components/SkillItem';
+import { Skill } from '@/skills';
 
-const Skills: React.FC = (props: object) => {
-	const { content }: object[] = props;
+type SkillsType = {
+	content: Skill[]
+};
+
+const Skills: React.FC<SkillsType> = (props: SkillsType) => {
+	const { content } = props;
 
 	const skillsList = content.map(x => (
 		<li key={content.indexOf(x) + 1} style={{ listStyle: 'none' }}>

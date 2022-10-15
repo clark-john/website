@@ -12,7 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
     "preview": "vite build && vite preview",
-    "prebuild": "eslint ./src/**/*.{tsx,ts}",
+    "prebuild": "eslint ./src/**/*.{tsx,ts} && tsc",
     "postbuild": "gh-pages -d dist"
   },
   "repository": {

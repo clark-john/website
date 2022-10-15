@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Outlet } from 'react-router-dom';
 import { Box, Container, useMediaQuery } from '@chakra-ui/react';
-import Navbar from './components/navbar';
+import Navbar from './components/Navbar';
 
 const Layout = () => {
 	const [isMobile] = useMediaQuery('(max-width: 390px)');

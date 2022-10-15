@@ -18,6 +18,7 @@ if (!(window.location.href.indexOf('#') !== -1)) {
 	window.location.hash = '/';
 }
 
+// @ts-ignore
 (import.meta.env.SSR ? hydrateRoot : createRoot)(
 	document.querySelector('#app')
 ).render(

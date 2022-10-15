@@ -39,16 +39,6 @@ const SocialMedia: React.FC = () => {
 					<Link href='https://tiktok.com/@cl4rk_tiktok' isExternal>
 						<Icon as={FaTiktok} w={9} h={9} className='icon-hover' />
 					</Link>
-					<style jsx='true'>
-						{`
-							.icon-hover {
-								transition: transform 100ms;
-							}
-							.icon-hover:hover {
-								transform: scale(1.15);
-							}
-						`}
-					</style>
 				</HStack>
 				<Box marginTop='20px !important'>{dayjs().format('MMMM DD, YYYY')}</Box>
 			</VStack>
