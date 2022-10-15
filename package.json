@@ -24,7 +24,7 @@
     "self_project"
   ],
   "lint-staged": {
-    "*.{tsx,ts}": "eslint"
+    "*.{tsx,ts}": "eslint && tsc"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.2.8",
@@ -38,8 +38,7 @@
     "react-router-dom": "^6.3.0",
     "workbox-recipes": "^6.2.4",
     "workbox-routing": "^6.2.4",
-    "workbox-strategies": "^6.2.4",
-    "zustand": "^4.1.0"
+    "workbox-strategies": "^6.2.4"
   },
   "devDependencies": {
     "@csstools/postcss-sass": "^5.0.1",
