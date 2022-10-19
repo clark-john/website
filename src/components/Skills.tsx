@@ -7,9 +7,8 @@ type SkillsType = {
 	content: Skill[]
 };
 
-const Skills: React.FC<SkillsType> = (props: SkillsType) => {
-	const { content } = props;
-
+const Skills: React.FC<SkillsType> = ({ content }) => {
+	
 	const skillsList = content.map(x => (
 		<li key={content.indexOf(x) + 1} style={{ listStyle: 'none' }}>
 			<SkillItem name={x.name} image={x.image} alt={x.alt} />

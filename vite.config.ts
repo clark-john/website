@@ -1,13 +1,12 @@
 import { defineConfig } from 'vite';
 import { VitePWA as pwa } from 'vite-plugin-pwa';
-import eslint from 'vite-plugin-eslint';
 import react from '@vitejs/plugin-react';
 import manifest from './manifest.json';
 import path from 'path';
+import checker from 'vite-plugin-checker';
 
 export default defineConfig({
 	plugins: [
-		eslint(),
 		react(),
 		pwa({
 			strategies: 'injectManifest',
@@ -15,6 +14,12 @@ export default defineConfig({
 			filename: 'service-worker.js',
 			manifest,
 		}),
+		checker({
+			typescript: true,
+			eslint: {
+				lintCommand: "eslint ./src/**/*.{tsx,ts} vite.config.ts --ignore-pattern .gitignore"
+			}
+		})
 	],
 	resolve: {
 		alias: [
