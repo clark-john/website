@@ -14,9 +14,13 @@ const Index: React.FC = () => (
 				:&#41;
 			</Box>
 			<Box fontSize={20}>
-				Hi there, <b>I&apos;m Clark.</b> A{' '}
-				<span className='link-onload'>coder</span> in this{' '}
-				<b>GitHub</b> platform. I usually do coding for fun.
+				Hi there, <b>I&apos;m Clark.</b> I build things and stuff. I love to learn and try
+				new technologies.
+				{/*
+				A{' '}
+					<span className='link-onload'>coder</span> in this{' '}
+					<b>GitHub</b> platform. I usually do coding for fun.
+				*/}
 			</Box>
 		</VStack>
 		<Skills content={skills} />
