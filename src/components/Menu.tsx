@@ -14,7 +14,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-const NavbarMenu = () => {
+const NavbarMenu: React.FC = () => {
 	const navigate = useNavigate();
 	const [isMobile] = useMediaQuery('(max-width: 720px)');
 

@@ -3,20 +3,13 @@ import { Box, Center, Grid, VStack, useMediaQuery } from '@chakra-ui/react';
 import SkillItem from '@/components/SkillItem';
 import { Skill } from '@/skills';
 
-type SkillsType = {
-	content: Skill[]
-};
-
-const Skills: React.FC<SkillsType> = ({ content }) => {
-	
+const Skills: React.FC<{ content: Skill[] }> = ({ content }) => {
 	const skillsList = content.map(x => (
 		<li key={content.indexOf(x) + 1} style={{ listStyle: 'none' }}>
 			<SkillItem name={x.name} image={x.image} alt={x.alt} />
 		</li>
 	));
-
 	const [isMobile] = useMediaQuery('(max-width: 520px)');
-
 	return (
 		<Center my={7}>
 			<VStack>

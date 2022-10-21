@@ -19,7 +19,6 @@ import dayjs from 'dayjs';
 
 const SocialMedia: React.FC = () => {
 	const [isMobile] = useMediaQuery('(max-width: 390px)');
-
 	return (
 		<Center mt={10}>
 			<VStack>
