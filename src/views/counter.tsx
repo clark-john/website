@@ -6,12 +6,14 @@ import {
 	Center, 
 	Flex
 } from '@chakra-ui/react';
-import { setCount as setStorageCount, getCount } from '@/utils/countStorage';
  
 const Counter: React.FC = () => {
-	const [count, setCount] = useState(getCount());
 
-	window.onunload = () => setStorageCount(Number(count));
+	const [count, setCount] = useState(localStorage.getItem("count") ?? 0);
+
+	window.onunload = () => {
+		localStorage.setItem("count", count.toString());
+	};
 
 	return (
 		<Box mt='2rem'>
