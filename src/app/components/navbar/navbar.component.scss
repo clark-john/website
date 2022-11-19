@@ -1,0 +1,60 @@
+@use "sass:list";
+@use "@angular/material" as mat;
+
+$pink: mat.get-color-from-palette(mat.define-palette(mat.$pink-palette), 400);
+
+:host {
+	display: grid;
+	align-items: center;
+	box-shadow: 0 0 1rem -3px black;
+}
+
+.group {
+	display: flex;
+	justify-content: space-around;
+	margin: 1.5rem 0;
+}
+
+.dropdown {
+	position: absolute;
+	top: 1rem;
+	left: 2rem;
+}
+.switch {	
+	position: absolute;
+	top: 1.25rem;
+	right: 2rem;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+a {
+	text-decoration: none;
+	color: black !important;
+}
+
+.title {
+	font-size: 2rem;
+}
+
+.darkMode {
+	:host {
+		background-color: #14151D;
+		a, button {
+			color: white !important;
+		}
+		mat-icon {
+			color: $pink;
+		}
+	}
+}
+
+@media screen and (max-width: 530px) {
+	#menu-button {
+		display: none;
+	}
+	.about {
+		opacity: 0;
+	}
+}

@@ -1,0 +1,46 @@
+@use "animations";
+@use "scrollbar";
+@use '@angular/material' as mat;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import "@angular/material/theming";
+@include mat.core();
+
+$angular-teal: mat.define-palette(mat.$teal-palette, 500, 100, 900);
+$angular-pink: mat.define-palette(mat.$pink-palette, 500, 100, 900);
+
+$angular-default-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $angular-teal,
+      accent: $angular-teal,
+    ),
+  )
+);
+
+$angular-dark-theme: mat.define-dark-theme(
+	(
+		color: (
+			primary: $angular-pink,
+			accent: $angular-pink
+		),
+	)
+);
+
+@include mat.all-component-themes($angular-default-theme);
+
+.darkMode {
+  @include mat.all-component-colors($angular-dark-theme);
+}
+
+html { 
+	height: 100%;
+	body {
+		margin: 0; 
+	}
+}
+
+*:not(mat-icon) { font-family: Inter, sans-serif !important; }
+
+.button-shadow { box-shadow: 2px 2px .25rem 0px rgba(0,0,0,0.3) }

@@ -1,0 +1,48 @@
+:host {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+.skills-list {
+	margin: 2rem 0;
+	display: grid;
+	place-items: center;
+	place-content: center;
+	grid-template-columns: 30% 30% 30%;
+	row-gap: 2rem;
+}
+.skill {
+	display: flex;
+	align-items: center;
+	gap: 1.25rem;
+	padding: 4px;
+}
+
+.section-3 {
+	display: grid;
+	place-items: center;
+	flex-direction: column;
+	gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+.socmeds {
+	display: flex;
+	gap: 2rem;
+}
+
+.socmed-link {
+	color: white;
+	font-size: 2rem;
+}
+
+@media screen and (max-width: 618px) {
+	.skills-list {
+		grid-template-columns: 40% 40%;
+	}
+}
+@media screen and (max-width: 446px) {
+	.skill-name {
+		display: none;
+	}
+}
