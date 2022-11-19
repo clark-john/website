@@ -1,0 +1,81 @@
+{
+  "configVersion": 1,
+  "timestamp": 1668878499085,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/index.html",
+        "/main.045ea5d4cce99c29.js",
+        "/manifest.webmanifest",
+        "/polyfills.3a116311cdd665a1.js",
+        "/runtime.89fb3c7fd3753b68.js",
+        "/styles.f4cdb32a2e00bb0f.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/icons/clark-128x128.png",
+        "/assets/icons/clark-144x144.png",
+        "/assets/icons/clark-152x152.png",
+        "/assets/icons/clark-192x192.png",
+        "/assets/icons/clark-384x384.png",
+        "/assets/icons/clark-512x512.png",
+        "/assets/icons/clark-72x72.png",
+        "/assets/icons/clark-96x96.png",
+        "/assets/icons/clark-maskable.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/icons/clark-128x128.png": "254ca908177676ea8fb119cc766e0bf17754b45f",
+    "/assets/icons/clark-144x144.png": "8eb0b29303602e1f1ba86529293f94e25e43d924",
+    "/assets/icons/clark-152x152.png": "4cd88c9e46ea9d4ca0b53fba4db37a717837a113",
+    "/assets/icons/clark-192x192.png": "467a08660b4ebeb1b6f9ab14cccaeba4840cafca",
+    "/assets/icons/clark-384x384.png": "169b077c8a00d64c5a0172b16aaa3bec06df667d",
+    "/assets/icons/clark-512x512.png": "71c80b53a7160c9818218f1e5756bbc1b1cd206a",
+    "/assets/icons/clark-72x72.png": "572a3b74c50121b0f90bb49997f38462170ada30",
+    "/assets/icons/clark-96x96.png": "67f4ee9f8a926c2221608d9c226ed8f5fe2f4687",
+    "/assets/icons/clark-maskable.png": "e55886174f144fa2912ed59ed7b0dd77b4aeac1c",
+    "/index.html": "143856e197d3c9b5acd95aa9f764e5fdedce14cc",
+    "/main.045ea5d4cce99c29.js": "1bd5340968b4dcfd43ba06da10a9090e2bf47006",
+    "/manifest.webmanifest": "2dd7e4282f62f6c06b03c19b8a6a892ba3de720c",
+    "/polyfills.3a116311cdd665a1.js": "a7ecdff3f9aa7adc4c01449db7e2a941b77bfc02",
+    "/runtime.89fb3c7fd3753b68.js": "4de3bbe8efb40832a40647fa112b3947b6c0ce97",
+    "/styles.f4cdb32a2e00bb0f.css": "cf50402cf6bf9bc12f2dc7b6e48ec0cd301db5f4"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
