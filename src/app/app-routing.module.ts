@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AboutComponent } from './views/about/about.component';
-import { IndexComponent } from './views/index/index.component';
-import { CounterComponent } from './views/counter/counter.component';
-import { NotfoundComponent } from './views/notfound/notfound.component';
+import { IndexComponent, AboutComponent, CounterComponent, NotfoundComponent } from './views';
 
 const routes: Routes = [
   { path: "", component: IndexComponent },

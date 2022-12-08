@@ -10,10 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatIconModule } from '@angular/material/icon';
 
-import { AboutComponent } from './views/about/about.component';
-import { IndexComponent } from './views/index/index.component';
-import { CounterComponent } from './views/counter/counter.component';
-import { NotfoundComponent } from './views/notfound/notfound.component';
+import { IndexComponent, AboutComponent, CounterComponent, NotfoundComponent } from './views';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 
