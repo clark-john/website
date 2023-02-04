@@ -2,6 +2,7 @@
   "name": "clark-john.github.io",
   "version": "3.0.0",
   "description": "My website",
+  "private": true,
   "author": "John Clark",
   "scripts": {
     "ng": "ng",
@@ -12,7 +13,6 @@
     "lint": "ng lint",
     "deploy": "gh-pages -d dist/clark-john.github.io"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^14.1.0",
     "@angular/cdk": "14",
@@ -29,8 +29,6 @@
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
-    "@sentry/angular": "^7.20.1",
-    "@sentry/tracing": "^7.20.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
