@@ -15,11 +15,6 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@nuxt/image"
   ],
-  router: {
-    options: {
-      hashMode: true
-    }
-  },
   pwa: {
     // copied some things from my previous vite.config.ts' pwa config
     strategies: 'injectManifest',
