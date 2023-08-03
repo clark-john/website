@@ -1,0 +1,40 @@
+{
+  "name": "Clark's GitHub Page",
+  "author": "John Clark",
+  "short_name": "Clark",
+  "description": "My website",
+  "lang": "en",
+  "start_url": "/",
+  "id": "clarkjohn",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/icons/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "manifest_version": 2,
+  "version": "1.0.0"
+}
