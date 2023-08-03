@@ -11,7 +11,7 @@
     "dev": "nuxt dev",
     "preview": "http-server .output/public",
     "postinstall": "nuxt prepare",
-    "deploy": "gh-pages -d .output/public",
+    "deploy": "surge .output/public clark.surge.sh",
     "tcheck": "vue-tsc --noEmit"
   },
   "devDependencies": {
