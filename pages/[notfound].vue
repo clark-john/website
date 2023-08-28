@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 useHead({
-  title: "Not Found",
+	title: "Not Found"
 });
 </script>
 
 <template>
-  <div>notfound</div>
+	<div>notfound</div>
 </template>
