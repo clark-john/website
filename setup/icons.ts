@@ -3,12 +3,12 @@ import { IoLogoVue, IoLogoPython } from "oh-vue-icons/icons/io";
 import { CoAngular, CoSassAlt, CoJava } from "oh-vue-icons/icons/co";
 import { SiNestjs, SiTypescript, SiGraphql } from "oh-vue-icons/icons/si";
 import { 
-  FaNodeJs, 
-  FaFacebook, 
-  FaInstagram, 
-  FaTwitter, 
-  FaTiktok, 
-  FaGithub 
+  FaNodeJs,
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaTiktok,
+  FaGithub
 } from "oh-vue-icons/icons/fa";
 
 export function setupIcons(){

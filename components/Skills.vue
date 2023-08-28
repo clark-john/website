@@ -1,34 +1,34 @@
 <script lang="ts" setup>
-import { Skill } from 'types';
+import { Skill } from "types";
 
 const skills: Skill[] = [
   {
     name: "Vue",
-    icon: 'io-logo-vue'
+    icon: "io-logo-vue",
   },
   {
     name: "Angular",
-    icon: 'co-angular'
+    icon: "co-angular",
   },
   {
     name: "TypeScript",
-    icon: "si-typescript"
+    icon: "si-typescript",
   },
   {
     name: "Sass",
-    icon: "co-sass-alt"
+    icon: "co-sass-alt",
   },
   {
     name: "Node",
-    icon: "fa-node-js"
+    icon: "fa-node-js",
   },
   {
     name: "GraphQL",
-    icon: "si-graphql"
+    icon: "si-graphql",
   },
-  {    
+  {
     name: "Nest",
-    icon: "si-nestjs"
+    icon: "si-nestjs",
   },
   {
     name: "Python",
@@ -36,16 +36,20 @@ const skills: Skill[] = [
   },
   {
     name: "Java",
-    icon: "co-java"
-  }
+    icon: "co-java",
+  },
 ];
-
 </script>
 <template>
   <div>
     <div class="section-header">Skills:</div>
     <div class="grid grid-cols-3 my-8 gap-2 gap-y-4 max-[415px]:grid-cols-2">
-      <SkillItem v-for="{ icon, name } in skills" :icon="icon" :name="name" :key="name.toLowerCase()" />
+      <SkillItem
+        v-for="{ icon, name } in skills"
+        :icon="icon"
+        :name="name"
+        :key="name.toLowerCase()"
+      />
     </div>
   </div>
 </template>

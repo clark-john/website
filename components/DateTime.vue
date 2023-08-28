@@ -11,14 +11,14 @@ const months = [
   "September",
   "October",
   "November",
-  "December"
+  "December",
 ];
 
-function toDoubleZeroes(num: number){
+function toDoubleZeroes(num: number) {
   return num < 10 ? "0" + num : num.toString();
 }
 
-function toReadable(date: Date){
+function toReadable(date: Date) {
   const month = months[date.getMonth()];
   const day = date.getDate();
   const year = date.getFullYear();
@@ -28,7 +28,7 @@ function toReadable(date: Date){
   const isAm = hour < 12;
   return `
     ${month} ${day}, ${year} 
-    ${isAm ? hour : (hour - 12)}:${minute}:${second} ${isAm ? 'AM' : 'PM'}
+    ${isAm ? hour : hour - 12}:${minute}:${second} ${isAm ? "AM" : "PM"}
   `.trim();
 }
 
@@ -41,7 +41,6 @@ const int = setInterval(() => {
 onUnmounted(() => {
   clearInterval(int);
 });
-
 </script>
 
 <template>

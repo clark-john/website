@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Skill } from 'types';
+import { Skill } from "types";
 
 defineProps<Skill>();
 </script>

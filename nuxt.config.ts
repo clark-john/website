@@ -1,4 +1,4 @@
-import manifest from './manifest.json';
+import manifest from "./manifest.json";
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -8,32 +8,28 @@ export default defineNuxtConfig({
     plugins: {
       autoprefixer: {},
       tailwindcss: {},
-    }
+    },
   },
-  modules: [
-    "@vite-pwa/nuxt",
-    "@nuxtjs/google-fonts",
-    "@nuxt/image"
-  ],
+  modules: ["@vite-pwa/nuxt", "@nuxtjs/google-fonts", "@nuxt/image"],
   pwa: {
     // copied some things from my previous vite.config.ts' pwa config
-    strategies: 'injectManifest',
-    srcDir: '',
+    strategies: "injectManifest",
+    srcDir: "",
     filename: "service-worker.js",
     manifest,
     injectRegister: "auto",
-    manifestFilename: "manifest.json"
+    manifestFilename: "manifest.json",
   },
   googleFonts: {
     families: {
       Raleway: {
-        wght: [1,2,3,4,5,6,7,8,9].map(x => x * 100)
+        wght: [1, 2, 3, 4, 5, 6, 7, 8, 9].map((x) => x * 100),
       },
       "Roboto Mono": true,
-      Inter: true
-    }
+      Inter: true,
+    },
   },
   experimental: {
-    payloadExtraction: false
-  }
+    payloadExtraction: false,
+  },
 });

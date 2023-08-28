@@ -7,6 +7,7 @@
   "start_url": "/",
   "id": "clarkjohn",
   "display": "standalone",
+  "version": "1.0.1",
   "icons": [
     {
       "src": "/icons/favicon.png",
@@ -35,6 +36,5 @@
       "type": "image/png"
     }
   ],
-  "manifest_version": 2,
-  "version": "1.0.1"
+  "manifest_version": 2
 }
