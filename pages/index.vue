@@ -1,7 +1,7 @@
 <template>
-	<div>
-		<TopPart class="top-part" />
-		<Socials class="socials" />
-		<Skills class="skills" />
-	</div>
+	<!-- <MainContent /> -->
+	<!-- <ScrollDown /> -->
+	<!-- <div class="h-[900px]">sdas</div> -->
+	<!-- <div class="h-[900px]" id="5">sdas</div> -->
+	<!-- <div class="h-[900px]">sdas</div> -->
 </template>

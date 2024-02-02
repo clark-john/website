@@ -10,23 +10,19 @@ export default defineNuxtConfig({
 			tailwindcss: {}
 		}
 	},
-	modules: ["@vite-pwa/nuxt", "@nuxtjs/google-fonts", "@nuxt/image"],
+	modules: ["@vite-pwa/nuxt", "@nuxtjs/google-fonts"],
 	pwa: {
-		// copied some things from my previous vite.config.ts' pwa config
 		strategies: "injectManifest",
 		srcDir: "",
 		filename: "service-worker.js",
+		// @ts-ignore
 		manifest,
 		injectRegister: "auto",
 		manifestFilename: "manifest.json"
 	},
 	googleFonts: {
 		families: {
-			Raleway: {
-				wght: [1, 2, 3, 4, 5, 6, 7, 8, 9].map(x => x * 100)
-			},
-			"Roboto Mono": true,
-			Inter: true
+			Comfortaa: true
 		}
 	},
 	experimental: {

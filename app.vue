@@ -1,8 +1,9 @@
 <script lang="ts" setup>
 import { OhVueIcon } from 'oh-vue-icons';
-import { setupIcons } from './setup/icons';
+import { setupIcons } from './utils';
 
 const app = useNuxtApp();
+const router = useRouter();
 
 setupIcons();
 app.vueApp.component('v-icon', OhVueIcon);
@@ -13,36 +14,31 @@ useSeoMeta({
 	ogLocale: "en-PH"
 });
 
-const html = document.documentElement;
-const body = document.body;
-const cl = html.classList;
+function gradientBg(){
+	document.body.style.backgroundColor = `hsl(${230 + (scrollY / 20)}deg 60 15)`
+}
 
-onMounted(() => {
-	const isUserDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-	const theme = localStorage.getItem("theme");
-	if (theme === 'dark' && isUserDark) {
-		cl.add("dark");
-	}
-	html.style.opacity = '1';
-	setTimeout(() => {
-		body.classList.add('transition');
-	}, 20);
-});
-
-const isDev = process.env.NODE_ENV === 'development';
+onMounted(gradientBg);
+addEventListener("scroll", gradientBg);
 
 </script>
 <template>
-	<div class="xs:mx-8 lg:mx-[27vw] h-[inherit]">
-		<Head>
-			<Title>Clark</Title>
-			<Link rel="icon" href="/icons/favicon.png" type="image/png" />
-			<Link rel="manifest" href="manifest.json" />
-			<Meta charset="utf-8" />
-		</Head>
-		<div class="wrapper dark:text-white h-[inherit]">
-			<NuxtPage />
-			<DateTime class="datetime" />
+	<Head>
+		<Title>Clark</Title>
+		<Link rel="icon" href="/icons/favicon.png" type="image/png" />
+		<Link rel="manifest" href="manifest.json" />
+		<Meta charset="utf-8" />
+	</Head>
+	<div class="wrapper text-white h-[inherit] font-comfortaa">
+		<div class="
+			font-comfortaa text-3xl text-yellow 
+			font-semibold py-5 px-20"
+		>
+			<span class="hover:cursor-pointer" @click="router.push('/')">
+				@httpistyep
+			</span>
 		</div>
+		<NuxtPage />
+		<!-- <DateTime class="datetime" /> -->
 	</div>
 </template>

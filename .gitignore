@@ -25,3 +25,4 @@ logs
 yarn.lock
 package-lock.json
 
+*.bak

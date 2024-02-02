@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { Social } from "types";
+import type { Social } from "@/types";
 
-const socials: Social[] = [
+const socmeds: Social[] = [
 	{
 		name: "Facebook",
 		icon: "fa-facebook",
@@ -10,12 +10,12 @@ const socials: Social[] = [
 	{
 		name: "Instagram",
 		icon: "fa-instagram",
-		href: "https://instagram.com/cl4rk_john"
+		href: "https://www.instagram.com/jclarkie_"
 	},
 	{
 		name: "Twitter",
 		icon: "fa-twitter",
-		href: "https://twitter.com/ClarkDoesTech"
+		href: "https://twitter.com/jclarkies_"
 	},
 	{
 		name: "GitHub",
@@ -25,21 +25,20 @@ const socials: Social[] = [
 	{
 		name: "TikTok",
 		icon: "fa-tiktok",
-		href: "https://tiktok.com/@httpistyep"
+		href: "https://www.instagram.com/jclarkie_"
 	}
 ];
 </script>
 
 <template>
-	<div class="my-16">
-		<div class="section-header">Links:</div>
-		<div class="grid-cols-2 grid gap-2">
+	<div class="py-10">
+		<div class="text-center text-5xl font-bold">Socials</div>
+		<div class="grid sm:grid-cols-2 mx-8 my-10 gap-4">
 			<SocialItem
-				v-for="{ href, name, icon } in socials"
+				v-for="{ href, name, icon } in socmeds"
+				:name="name"
 				:href="href"
 				:icon="icon"
-				:name="name"
-				:key="name.toLowerCase()"
 			/>
 		</div>
 	</div>

@@ -16,39 +16,44 @@ html, body, #__nuxt {
 }
 
 html {
-	/* prevent foit */
-	opacity: 0;
+	scroll-behavior: smooth;	
 }
 
 body {
-	padding-block: 2.25rem; 
-	@apply bg-green-100;
+	overflow: overlay;
 }
 
 .transition {
 	transition: addTrans(background-color), addTrans(color);
 }
 
-html.dark {
-	body {
-		@apply bg-[#032626];
-	}
-}
-
 * {
-	font-family: Raleway, sans-serif;
 	box-sizing: border-box;
 }
 
 .section-header {
-	@apply font-raleway ml-4 my-4 text-3xl font-medium;
+	@apply ml-4 my-4 text-3xl font-medium;
 }
 
-.wrapper {
+/*.wrapper {
 	display: grid;
 	grid-template-rows: 1fr auto;
+}*/
+
+/*.social-item {
+	transition: filter 150ms, addTrans(background-color), addTrans(color);
+}
+*/
+
+::-webkit-scrollbar {
+	width: 10px;
 }
 
-.social-item {
-	transition: filter 150ms, addTrans(background-color), addTrans(color);
+::-webkit-scrollbar-track {
+	background-color: hsl(237 50% 14%);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: white;
+	border-radius: 10px;
 }

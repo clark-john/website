@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Social } from "types";
+import type { Social } from "@/types";
 
 defineProps<Social>();
 
@@ -10,10 +10,10 @@ function openLink(link: string) {
 
 <template>
 	<div
-		class="font-inter dark:bg-teal-900 text-sm flex gap-2 items-center py-[6px] px-3 rounded-xl hover:brightness-75 hover:cursor-pointer bg-[#AAF8F4] social-item"
 		@click="openLink(href)"
+		class="border-2 border-white border-solid rounded-3xl py-2 px-3 flex items-center gap-2 hover:cursor-pointer transition-[transform] duration-150 hover:scale-[1.02]"
 	>
+		<v-icon :name="icon" scale="2" />
 		<span class="font-semibold">{{ name }}</span>
-		<v-icon :name="icon" />
 	</div>
 </template>
