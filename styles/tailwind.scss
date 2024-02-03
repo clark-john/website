@@ -1,13 +1,7 @@
-@use "transition";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
-
-@function addTrans($prop, $ms: 100ms){
-	@return $prop $ms cubic-bezier(.25,.6,.85,.45);
-}
 
 html, body, #__nuxt {
 	padding: 0;
@@ -23,27 +17,9 @@ body {
 	overflow: overlay;
 }
 
-.transition {
-	transition: addTrans(background-color), addTrans(color);
-}
-
 * {
 	box-sizing: border-box;
 }
-
-.section-header {
-	@apply ml-4 my-4 text-3xl font-medium;
-}
-
-/*.wrapper {
-	display: grid;
-	grid-template-rows: 1fr auto;
-}*/
-
-/*.social-item {
-	transition: filter 150ms, addTrans(background-color), addTrans(color);
-}
-*/
 
 ::-webkit-scrollbar {
 	width: 10px;

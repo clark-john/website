@@ -27,8 +27,5 @@ export default defineNuxtConfig({
 	},
 	experimental: {
 		payloadExtraction: false
-	},
-	prerender: {
-		ignore: ["^#"]
 	}
 });

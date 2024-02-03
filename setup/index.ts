@@ -1,11 +1,13 @@
 import { addIcons } from "oh-vue-icons";
-import { PrChevronDown } from "oh-vue-icons/icons/pr";
+import { PrChevronDown, PrEnvelope, PrPhone } from "oh-vue-icons/icons/pr";
+import { CoVerticalAlignTop } from "oh-vue-icons/icons/co";
 import { 
   FaFacebook,
   FaInstagram,
   FaTwitter,
   FaTiktok,
-  FaGithub
+  FaGithub,
+  FaFrown
 } from "oh-vue-icons/icons/fa";
 
 export function setupIcons() {
@@ -19,6 +21,10 @@ export function setupIcons() {
 
   addIcons(
     ...socmeds,
-    PrChevronDown
+    PrChevronDown,
+    CoVerticalAlignTop,
+    PrEnvelope,
+    PrPhone,
+    FaFrown
   );
 }

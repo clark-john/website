@@ -25,7 +25,7 @@ const socmeds: Social[] = [
 	{
 		name: "TikTok",
 		icon: "fa-tiktok",
-		href: "https://www.instagram.com/jclarkie_"
+		href: "https://www.tiktok.com/@httpistyep"
 	}
 ];
 </script>

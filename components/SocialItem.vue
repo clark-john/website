@@ -4,7 +4,7 @@ import type { Social } from "@/types";
 defineProps<Social>();
 
 function openLink(link: string) {
-	window.open(link);
+	open(link);
 }
 </script>
 

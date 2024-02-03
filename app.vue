@@ -1,9 +1,8 @@
 <script lang="ts" setup>
 import { OhVueIcon } from 'oh-vue-icons';
-import { setupIcons } from './utils';
+import { setupIcons } from './setup';
 
 const app = useNuxtApp();
-const router = useRouter();
 const route = useRoute();
 
 const navbar = ref();
@@ -18,16 +17,17 @@ useSeoMeta({
 });
 
 function gradientBg(){
-	document.body.style.backgroundColor = `hsl(${230 + (scrollY / 20)}deg 60 15)`
+	document.body.style.backgroundColor = `hsl(${230 + (scrollY / 15)}deg 60 15)`
 }
 
 onMounted(() => {
-	if (route.path === '/'){		
+	if (route.path === '/'){
 		const m = document.querySelector(".main-content") as HTMLDivElement;
-		m.style.height = (window.innerHeight - navbar.value.clientHeight) + "px";
+		m.style.height = (innerHeight - navbar.value.clientHeight) + "px";
 	}
 	gradientBg();
 });
+
 addEventListener("scroll", gradientBg);
 
 </script>
@@ -44,9 +44,7 @@ addEventListener("scroll", gradientBg);
 			font-semibold py-5 px-20"
 			ref="navbar"
 		>
-			<span class="hover:cursor-pointer" @click="router.push('/')">
-				@httpistyep
-			</span>
+			<a href="/">@httpistyep</a>
 		</div>
 		<NuxtPage />
 		<!-- <DateTime class="datetime" /> -->
