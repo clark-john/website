@@ -4,6 +4,9 @@ import { setupIcons } from './utils';
 
 const app = useNuxtApp();
 const router = useRouter();
+const route = useRoute();
+
+const navbar = ref();
 
 setupIcons();
 app.vueApp.component('v-icon', OhVueIcon);
@@ -18,7 +21,13 @@ function gradientBg(){
 	document.body.style.backgroundColor = `hsl(${230 + (scrollY / 20)}deg 60 15)`
 }
 
-onMounted(gradientBg);
+onMounted(() => {
+	if (route.path === '/'){		
+		const m = document.querySelector(".main-content") as HTMLDivElement;
+		m.style.height = (window.innerHeight - navbar.value.clientHeight) + "px";
+	}
+	gradientBg();
+});
 addEventListener("scroll", gradientBg);
 
 </script>
@@ -33,6 +42,7 @@ addEventListener("scroll", gradientBg);
 		<div class="
 			font-comfortaa text-3xl text-yellow 
 			font-semibold py-5 px-20"
+			ref="navbar"
 		>
 			<span class="hover:cursor-pointer" @click="router.push('/')">
 				@httpistyep

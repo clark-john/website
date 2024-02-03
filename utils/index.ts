@@ -1,13 +1,24 @@
-export function generateLightnessPercentages(count: number, difference: number = 11){
-	const start = 14;
+import { addIcons } from "oh-vue-icons";
+import { PrChevronDown } from "oh-vue-icons/icons/pr";
+import { 
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaTiktok,
+  FaGithub
+} from "oh-vue-icons/icons/fa";
 
-	const arr = []
+export function setupIcons() {
+  const socmeds = [
+    FaGithub,
+    FaFacebook,
+    FaInstagram,
+    FaTwitter,
+    FaTiktok
+  ];
 
-	for (let x = 0; x < count; x++) {
-		arr.push((start + (difference * x)) + "%");
-	}
-
-	return arr;
-}	
-
-export { setupIcons } from './icons';
+  addIcons(
+    ...socmeds,
+    PrChevronDown
+  );
+}

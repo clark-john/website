@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Work } from "../types"; 
+import type { Work } from "../types";
 
 defineProps<Work>();
 </script>
