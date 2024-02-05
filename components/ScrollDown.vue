@@ -47,17 +47,17 @@ onMounted(modifyLeft);
 addEventListener("resize", modifyLeft);
 
 function scrollDown() {
-	document.location.href = "#haha";
+	document.location.href = "#socials";
 }
 </script>
 
 <template>
 	<div
-		class="main grid justify-items-center hover:cursor-pointer"
+		class="main grid justify-items-center hover:cursor-pointer scroll-down"
 		ref="m"
 		@click="scrollDown"
 	>
-		Scroll down for more
+		Scroll down for my socials and such
 		<v-icon name="pr-chevron-down" scale="4"></v-icon>
 	</div>
 </template>

@@ -7,7 +7,8 @@ import {
   FaTwitter,
   FaTiktok,
   FaGithub,
-  FaFrown
+  FaFrown,
+  FaTelegram
 } from "oh-vue-icons/icons/fa";
 
 export function setupIcons() {
@@ -16,7 +17,8 @@ export function setupIcons() {
     FaFacebook,
     FaInstagram,
     FaTwitter,
-    FaTiktok
+    FaTiktok,
+    FaTelegram
   ];
 
   addIcons(

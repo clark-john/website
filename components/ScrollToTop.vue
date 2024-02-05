@@ -14,6 +14,14 @@ addEventListener("scroll", () => {
 	}
 });
 
+function swapFirstTwoArrayMembers(arr: any[]): any[] {
+	const a = [...arr];
+	const temp = a[1];
+	a[1] = a[0];
+	a[0] = temp; // a[1];
+	return a;
+}
+
 function animateAppearScroll(inOrOut: "in" | "out") {
 	const cl = scroll.value!.classList;
 
@@ -21,27 +29,19 @@ function animateAppearScroll(inOrOut: "in" | "out") {
 		cl.remove("hidden");
 	}
 
+	const kf = [
+		{
+			translate: "0 10px",
+			opacity: 0
+		},
+		{
+			translate: "0",
+			opacity: 1
+		}
+	];
+
 	scroll.value!.animate(
-		// sa susunod q na lng gawan ng shortcut katamad e
-		inOrOut === 'in' ? [
-			{
-				translate: "0 10px",
-				opacity: 0
-			},
-			{
-				translate: "0",
-				opacity: 1
-			}
-		] : [
-			{
-				translate: "0",
-				opacity: 1
-			},
-			{
-				translate: "0 10px",
-				opacity: 0
-			}
-		],
+		inOrOut === 'in' ? kf : swapFirstTwoArrayMembers(kf),
 		{
 			easing: "ease-in-out",
 			duration: 150,
@@ -64,15 +64,13 @@ function scrollToTop() {
 
 <template>
 	<div
-		class="stt hidden border-white border-2 p-2 rounded-full border-solid translate-y-[10px] opacity-0 transition-[transform] duration-100 hover:scale-110 hover:cursor-pointer"
+		class="stt hidden bg-[#ffffffa0] p-2 rounded-full translate-y-[10px] opacity-0 transition-[transform] duration-100 hover:scale-110 hover:cursor-pointer"
 		ref="scroll"
 		@click="scrollToTop"
 	>
 		<v-icon
 			name="co-vertical-align-top"
 			scale="2"
-			inverse
-			fill="#00ff00"
 		></v-icon>
 	</div>
 </template>
@@ -82,5 +80,8 @@ function scrollToTop() {
 	position: fixed;
 	right: 1.2rem;
 	bottom: 5%;
+}
+.ov-icon {
+	color: #000000aa;
 }
 </style>

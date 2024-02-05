@@ -11,6 +11,11 @@ const contacts: Social[] = [
 		href: "tel:09288901066",
 		name: "SMS",
 		icon: "pr-phone"
+	},
+	{
+		href: 'https://t.me/jclarkies',
+		name: "Telegram",
+		icon: "fa-telegram"
 	}
 ]
 </script>

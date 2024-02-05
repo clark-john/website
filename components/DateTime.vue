@@ -44,7 +44,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-	<div class="text-center h-full max-[415px]:my-4">
+	<div class="text-center pb-8">
 		{{ toReadable(date) }}
 	</div>
 </template>
