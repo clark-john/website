@@ -1,13 +1,6 @@
 <script lang="ts" setup>
 const m = ref<HTMLDivElement>();
 
-function modifyLeft() {
-	const j = m.value;
-	if (j) {
-		j.style.left = innerWidth / 2 - j.clientWidth / 2 + "px";
-	}
-}
-
 let isFading = false;
 
 function animateFade(inOrOut: "in" | "out") {
@@ -17,8 +10,6 @@ function animateFade(inOrOut: "in" | "out") {
 	if (!isOut) {
 		v.style.display = "";
 	}
-
-	modifyLeft();
 
 	v.animate(
 		{
@@ -43,9 +34,6 @@ addEventListener("scroll", () => {
 	}
 });
 
-onMounted(modifyLeft);
-addEventListener("resize", modifyLeft);
-
 function scrollDown() {
 	document.location.href = "#socials";
 }
@@ -53,12 +41,12 @@ function scrollDown() {
 
 <template>
 	<div
-		class="main grid justify-items-center hover:cursor-pointer scroll-down"
+		class="main grid justify-items-center text-center hover:cursor-pointer scroll-down"
 		ref="m"
 		@click="scrollDown"
 	>
 		Scroll down for my socials and such
-		<v-icon name="pr-chevron-down" scale="4"></v-icon>
+		<v-icon name="pr-chevron-down" scale="4" class="-translate-y-2"></v-icon>
 	</div>
 </template>
 
@@ -66,5 +54,7 @@ function scrollDown() {
 .main {
 	position: absolute;
 	bottom: 2%;
+	left: 50%;
+	translate: -50% 0;
 }
 </style>
