@@ -9,7 +9,7 @@
   "scripts": {
     "build": "yarn tcheck && nuxt generate",
     "dev": "nuxt dev",
-    "preview": "http-server .output/public",
+    "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "deploy": "surge .output/public clark.surge.sh",
     "tcheck": "nuxt typecheck",
