@@ -6,6 +6,7 @@
   "lang": "en",
   "start_url": "/",
   "id": "clarkjohn",
+  "display": "standalone",
   "version": "2.0.1",
   "icons": [
     {
