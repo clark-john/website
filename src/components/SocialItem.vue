@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Social } from "@/types";
+import type { Social } from "../types";
 
 defineProps<Social>();
 

@@ -11,22 +11,20 @@ import {
   FaTelegram
 } from "oh-vue-icons/icons/fa";
 
-export function setupIcons() {
-  const socmeds = [
-    FaGithub,
-    FaFacebook,
-    FaInstagram,
-    FaTwitter,
-    FaTiktok,
-    FaTelegram
-  ];
+const socmeds = [
+  FaGithub,
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaTiktok,
+  FaTelegram
+];
 
-  addIcons(
-    ...socmeds,
-    PrChevronDown,
-    CoVerticalAlignTop,
-    PrEnvelope,
-    PrPhone,
-    FaFrown
-  );
-}
+addIcons(
+  ...socmeds,
+  PrChevronDown,
+  CoVerticalAlignTop,
+  PrEnvelope,
+  PrPhone,
+  FaFrown
+);

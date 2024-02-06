@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { ref, onUnmounted } from 'vue';
+
 const months = [
 	"January",
 	"February",

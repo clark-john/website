@@ -1,9 +1,3 @@
-<script lang="ts" setup>
-useHead({
-	title: "Not Found"
-});
-</script>
-
 <template>
 	<div class="grid justify-center justify-items-center">
 		<v-icon name="fa-frown" scale="14" />
