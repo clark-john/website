@@ -1,9 +1,14 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
 const m = ref<HTMLDivElement>();
+const socsTop = ref<number>();
 
 let isFading = false;
+
+onMounted(() => {
+	socsTop.value = document.getElementById("socials")?.getBoundingClientRect().top!;
+});
 
 function animateFade(inOrOut: "in" | "out") {
 	const v = m.value!;
@@ -37,7 +42,7 @@ addEventListener("scroll", () => {
 });
 
 function scrollDown() {
-	document.location.href = "#socials";
+	scroll({ top: socsTop.value });
 }
 </script>
 

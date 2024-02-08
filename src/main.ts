@@ -1,5 +1,5 @@
 import './tailwind.scss';
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 import { createApp } from 'vue';
 import { OhVueIcon } from 'oh-vue-icons';
 import './setupIcons';
@@ -17,7 +17,7 @@ const routes: RouteRecordRaw[] = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes
 });
 

@@ -1,20 +1,11 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
-import { useRouter } from 'vue-router';
-
-const router = useRouter();
 
 function gradientBg(){
   document.body.style.backgroundColor = `hsl(${230 + (scrollY / 19)}deg 60 15)`
 }
 
-onMounted(() => {
-  if (location.hash) {
-    router.replace("/");
-  }
-  gradientBg();
-});
-
+onMounted(gradientBg);
 addEventListener("scroll", gradientBg);
 </script>
 
@@ -30,4 +21,3 @@ addEventListener("scroll", gradientBg);
     <router-view />
   </div>
 </template>
-
