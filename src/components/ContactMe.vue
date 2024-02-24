@@ -8,7 +8,7 @@ const contacts: Social[] = [
 		icon: "pr-envelope"
 	},
 	{
-		href: "tel:09288901066",
+		href: "sms:09288901066",
 		name: "SMS",
 		icon: "pr-phone"
 	},
